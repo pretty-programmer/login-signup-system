@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Firebase Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .inline {
+        display: inline
+      }
+      .align-right {
+        text-align: right
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login_div" class="main-div">
+      <h3>Firebase Web login Example</h3>
+      <input placeholder="Email..." id="email_field" type="email"> 
+      <input placeholder="Password..." id="password_field" type="password"> <button onclick="login()">Login to
+        Account</button> <br>
+      <button onclick="switch_signup()">Create New Account</button> <br>
+      <p onclick="switch_pass_reset()">Forgot Password</p>
+    </div>
+    <div id="signup_div" class="main-div">
+      <h3>Firebase Web Sign-Up Example</h3>
+      <input placeholder="Email..." id="email_field2" type="email"> 
+      <input placeholder="Password..." id="password_field2" type="password"> 
+      <input placeholder="Confirm Password..." id="password_confirm_field" type="password"> <button onclick="signup()">Submit
+        a New Account</button> <br>
+      <button onclick="switch_login()">Login to Account</button> 
+    </div>
+    <div id="pass_reset_div" class="main-div">
+      <h3>Firebase Pass Reset Example</h3>
+      <input placeholder="Email..." id="email_field3" type="email">
+      <button onclick="reset_pass()">Reset Password</button><br>
+      <button onclick="switch_login()">Login to Account</button> <br>
+      <button onclick="switch_signup()">Create New Account</button>
+    </div>
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p id="user_para">Welcome to Firebase web login Example. You're currently
+        logged in.</p>
+      <button onclick="logout()">Logout</button> </div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBMO2-qX75bqpiwFsbzzXq-2CLa7Y8X1q0",
+      authDomain: "dnd-database-f238c.firebaseapp.com",
+      projectId: "dnd-database-f238c",
+      storageBucket: "dnd-database-f238c.appspot.com",
+      messagingSenderId: "859378956920",
+      appId: "1:859378956920:web:1e24e0882469b8d1cbcb8d",
+      measurementId: "G-PP64733GLP"
+    };
+    firebase.initializeApp(config);
+  </script>
+    <script src="index.js"></script>
+  </body>
+</html>
